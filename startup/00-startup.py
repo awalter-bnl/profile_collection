@@ -4,6 +4,9 @@
 from ophyd import setup_ophyd
 setup_ophyd()
 
+from bluesky.log import current_handler
+current_handler.setLevel('CRITICAL')
+
 from metadatastore.mds import MDS
 # from metadataclient.mds import MDS
 from databroker import Broker
